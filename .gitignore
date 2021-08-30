@@ -15,3 +15,4 @@ apiService/.idea
 
 protos/vendor
 .idea
+*.DS_Store

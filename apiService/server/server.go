@@ -4,12 +4,12 @@ import (
 	"context"
 	"log"
 
-	"github.com/Joker666/microservice-demo/apiService/interceptor"
-	"github.com/Joker666/microservice-demo/protos/task"
+	"gonex.net/apiService/interceptor"
+	"gonex.net/protos/task"
 
-	pb "github.com/Joker666/microservice-demo/protos/api"
-	"github.com/Joker666/microservice-demo/protos/project"
-	"github.com/Joker666/microservice-demo/protos/user"
+	pb "gonex.net/protos/api"
+	"gonex.net/protos/project"
+	"gonex.net/protos/user"
 )
 
 // Server holds necessary values for server

@@ -4,9 +4,9 @@ package api
 
 import (
 	context "context"
-	project "github.com/Joker666/microservice-demo/protos/project"
-	task "github.com/Joker666/microservice-demo/protos/task"
-	user "github.com/Joker666/microservice-demo/protos/user"
+	project "gonex.net/protos/project"
+	task "gonex.net/protos/task"
+	user "gonex.net/protos/user"
 	grpc "google.golang.org/grpc"
 	codes "google.golang.org/grpc/codes"
 	status "google.golang.org/grpc/status"

@@ -1,12 +1,12 @@
 package cmd
 
 import (
-	"github.com/Joker666/microservice-demo/apiService/interceptor"
-	"github.com/Joker666/microservice-demo/apiService/server"
-	pb "github.com/Joker666/microservice-demo/protos/api"
-	"github.com/Joker666/microservice-demo/protos/project"
-	"github.com/Joker666/microservice-demo/protos/task"
-	"github.com/Joker666/microservice-demo/protos/user"
+	"gonex.net/apiService/interceptor"
+	"gonex.net/apiService/server"
+	pb "gonex.net/protos/api"
+	"gonex.net/protos/project"
+	"gonex.net/protos/task"
+	"gonex.net/protos/user"
 	grpc_middleware "github.com/grpc-ecosystem/go-grpc-middleware"
 
 	"log"

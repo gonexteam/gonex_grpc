@@ -1,6 +1,6 @@
 package main
 
-import "github.com/Joker666/microservice-demo/apiService/cmd"
+import "gonex.net/apiService/cmd"
 
 func main() {
 	cmd.Execute()

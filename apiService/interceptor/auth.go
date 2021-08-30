@@ -2,7 +2,7 @@ package interceptor
 
 import (
 	"context"
-	"github.com/Joker666/microservice-demo/protos/user"
+	"gonex.net/protos/user"
 	"google.golang.org/grpc"
 	"google.golang.org/grpc/codes"
 	"google.golang.org/grpc/grpclog"

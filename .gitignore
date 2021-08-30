@@ -13,6 +13,6 @@ taskService/vendor
 apiService/vendor
 apiService/.idea
 
-protos/vendor
+vendor
 .idea
 *.DS_Store

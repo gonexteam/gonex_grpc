@@ -6,8 +6,8 @@ import (
 	"os"
 	"time"
 
-	pb "github.com/Joker666/microservice-demo/protos/api"
-	"github.com/Joker666/microservice-demo/protos/user"
+	pb "gonex.net/protos/api"
+	"gonex.net/protos/user"
 	"github.com/spf13/cobra"
 	"google.golang.org/grpc"
 )

@@ -13,9 +13,9 @@ import (
 	"io"
 	"net/http"
 
-	"github.com/Joker666/microservice-demo/protos/project"
-	"github.com/Joker666/microservice-demo/protos/task"
-	"github.com/Joker666/microservice-demo/protos/user"
+	"gonex.net/protos/project"
+	"gonex.net/protos/task"
+	"gonex.net/protos/user"
 	"github.com/golang/protobuf/descriptor"
 	"github.com/golang/protobuf/proto"
 	"github.com/grpc-ecosystem/grpc-gateway/runtime"

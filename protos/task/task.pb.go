@@ -7,8 +7,8 @@
 package task
 
 import (
-	project "github.com/Joker666/microservice-demo/protos/project"
-	user "github.com/Joker666/microservice-demo/protos/user"
+	project "gonex.net/protos/project"
+	user "gonex.net/protos/user"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	reflect "reflect"

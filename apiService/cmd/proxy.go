@@ -1,14 +1,14 @@
 package cmd
 
 import (
-	gw "github.com/Joker666/microservice-demo/protos/api"
 	"github.com/joho/godotenv"
+	gw "gonex.net/protos/api"
 	"log"
 	"os"
 
 	"context"
 	"flag"
-	"github.com/grpc-ecosystem/grpc-gateway/v2/runtime"
+	"github.com/grpc-ecosystem/grpc-gateway/runtime"
 	"github.com/spf13/cobra"
 	"google.golang.org/grpc"
 	"net/http"

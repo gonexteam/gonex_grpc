@@ -2,7 +2,7 @@ The Star And Thank Author License (SATA)
 
 Copyright (c) [MD Ahad Hasan](https://github.com/joker666) <mr.k779@gmail.com>
 
-Project Url: https://github.com/Joker666/microservice-demo
+Project Url: https://gonex.net
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal

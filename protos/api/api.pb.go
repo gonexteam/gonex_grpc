@@ -7,9 +7,9 @@
 package api
 
 import (
-	project "github.com/Joker666/microservice-demo/protos/project"
-	task "github.com/Joker666/microservice-demo/protos/task"
-	user "github.com/Joker666/microservice-demo/protos/user"
+	project "gonex.net/protos/project"
+	task "gonex.net/protos/task"
+	user "gonex.net/protos/user"
 	_ "google.golang.org/genproto/googleapis/api/annotations"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"

@@ -1,4 +1,4 @@
-[![License](https://img.shields.io/badge/license-SATA-blue)](https://github.com/Joker666/microservice-demo/blob/master/LICENSE)
+[![License](https://img.shields.io/badge/license-SATA-blue)](https://gonex.net/blob/master/LICENSE)
 
 ![logo](https://i.imgur.com/KpKFXgP.png)
 <h1 align="center">Microservice Demo</h1>
@@ -39,10 +39,10 @@ The project is the world's simplest task management software. A user can registe
 
 | Service                                                      | Technologies    | Description                                                  |
 | ------------------------------------------------------------ | --------------- | :----------------------------------------------------------- |
-| [User Service](https://github.com/Joker666/microservice-demo/tree/main/userService) | NodeJS, MongoDB | It handles user registration/login and authentication for other services |
-| [Project Service](https://github.com/Joker666/microservice-demo/tree/main/projectService) | Python, MySQL   | It handles project and tags creation and update              |
-| [Task Service](https://github.com/Joker666/microservice-demo/tree/main/taskService) | Ruby, PostgreSQL  | It handles task creation, add tags to task and assign task to a user |
-| [API Service](https://github.com/Joker666/microservice-demo/tree/main/apiService) | Go              | It handles routing api calls to all the services and a proxy server to handle HTTP 1.0 requests |
+| [User Service](https://gonex.net/tree/main/userService) | NodeJS, MongoDB | It handles user registration/login and authentication for other services |
+| [Project Service](https://gonex.net/tree/main/projectService) | Python, MySQL   | It handles project and tags creation and update              |
+| [Task Service](https://gonex.net/tree/main/taskService) | Ruby, PostgreSQL  | It handles task creation, add tags to task and assign task to a user |
+| [API Service](https://gonex.net/tree/main/apiService) | Go              | It handles routing api calls to all the services and a proxy server to handle HTTP 1.0 requests |
 
 We have chosen to use monorepo for all the services since it will ease the process for us.
 
@@ -67,7 +67,7 @@ This service is written in NodeJS. So, nodejs and npm needs to be installed in t
 After that, run `npm install` from within `userService` directory. Make sure MongoDB is running and the url is updated in `.env`. The required compiled proto files are already in `proto` directory.
 Then run the service with `npm run start`
 
-For more information about how to use client to interact with the server, look into the documentation in [User Service](https://github.com/Joker666/microservice-demo/tree/main/userService)
+For more information about how to use client to interact with the server, look into the documentation in [User Service](https://gonex.net/tree/main/userService)
 
 ### Running Python based Project Service
 This service is written in Python 3.8. So python 3 needs to be installed in the system. We have also used MySQL as data layer. You can either install MySQL locally or use docker to run it. You have to update the `.env` file insider `projectService` with the MySQL url to be able to connect to the database. We have used `SQLAlchemy` as ORM to access the database.
@@ -81,7 +81,7 @@ After that, if you are using `pipenv` run `pipenv install`, from within `project
 `pip install -r requirements.txt`. Make sure MySQL is running and the url is updated in `.env`. The required compiled proto files are already in `proto` directory.
 If you are not already inside the virtual environment, activate it with `pipenv shell`(only required if you are using `pipenv`). Then run the service with `python service.py` or `python3 service.py`
 
-For more information about how to use client to interact with the server, look into the documentation in [Project Service](https://github.com/Joker666/microservice-demo/tree/main/projectService)
+For more information about how to use client to interact with the server, look into the documentation in [Project Service](https://gonex.net/tree/main/projectService)
 
 ### Running Ruby based Task Service
 This service is written in Ruby 2.7. So Ruby needs to be installed in the system. We have also used PostgreSQL as data layer. You can either install PostgreSQL locally or use docker to run it. You have to update the `.env` file insider `taskService` with the PostgreSQL url to be able to connect to the database. We have used [Rom](https://rom-rb.org/) as ORM to access the database. Required tools
@@ -91,13 +91,13 @@ This service is written in Ruby 2.7. So Ruby needs to be installed in the system
 After that, run `bundle install` from within `taskService` directory. Make sure PostgreSQL is running and the url is updated in `.env`. The required compiled proto files are already in `proto` directory. However like the the other two
 services, `taskService` is not independent. It depends on `userService` and `projectService`. So these two services need to be running for `taskService` to run. `.env` needs to be updated with proper URL of those two services. Provided other two services are running, run `ruby server.rb` to start this service.
 
-For more information about how to use client to interact with the server, look into the documentation in [Task Service](https://github.com/Joker666/microservice-demo/tree/main/taskService)
+For more information about how to use client to interact with the server, look into the documentation in [Task Service](https://gonex.net/tree/main/taskService)
 
 ### Running Golang based API Service
 This service the the gateway to all the other services. To run this service, you need to make sure all other services are running properly. This service is written in Go 1.15, and you need to make sure it is installed in the system with `GOROOT` and `GOPATH` configured. Required tools
 - **Go 1.15**
 
-I have added convenient `build.sh` the creates the binary and `run.sh` that runs the service. The required protos are imported from outside `protos` folder which is also a go package. Keeping all services' proto files here, we could make it a go package and import them in api service. More information in [API Service](https://github.com/Joker666/microservice-demo/tree/main/apiService)
+I have added convenient `build.sh` the creates the binary and `run.sh` that runs the service. The required protos are imported from outside `protos` folder which is also a go package. Keeping all services' proto files here, we could make it a go package and import them in api service. More information in [API Service](https://gonex.net/tree/main/apiService)
 
 #### Running the Golang based Proxy Server
 The proxy server is inside `apiService`. This helps us transcode HTTP 1.0 requests to from rpc requests. So that we can use tools like Postman to hit endpoints in this application. If you are using GRPC-Web, you do not need this. But I doubt about it's widespread usage. Required tools
@@ -137,13 +137,13 @@ To fix a bug or enhance an existing module, follow these steps:
 - Create a Pull Request 
 
 ### Bug / Feature Request
-If you find a bug, kindly open an issue [here](https://github.com/Joker666/microservice-demo/issues/new).<br/>
-If you'd like to request/add a new function, feel free to do so by opening an issue [here](https://github.com/Joker666/microservice-demo/issues/new). 
+If you find a bug, kindly open an issue [here](https://gonex.net/issues/new).<br/>
+If you'd like to request/add a new function, feel free to do so by opening an issue [here](https://gonex.net/issues/new). 
 
 ## See Also
 - https://github.com/GoogleCloudPlatform/microservices-demo
 - https://github.com/microservices-demo/microservices-demo
 
-## [License](https://github.com/Joker666/microservice-demo/blob/master/LICENSE.md)
+## [License](https://gonex.net/blob/master/LICENSE.md)
 
 MIT © [MD Ahad Hasan](https://github.com/joker666)

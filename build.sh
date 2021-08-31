@@ -24,9 +24,9 @@ grpc_tools_ruby_protoc \
 
 # Fix python import 
 # https://github.com/protocolbuffers/protobuf/issues/1491
-pushd projectService/proto
-sed -i -E 's/^import.*_pb2/from . \0/' *.py
-popd
+#pushd projectService/proto
+#sed -i -E 's/^import.*_pb2/from . \0/' *.py
+#popd
 
 # Generate requirements.txt for python project
 pushd projectService

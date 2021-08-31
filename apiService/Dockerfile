@@ -13,12 +13,12 @@ FROM golang:1.15 AS builder
 #COPY . ${SRC_DIR}
 
 WORKDIR /app
-COPY apiService /app
-COPY protos /app
+COPY apiService /app/apiService
+COPY protos /app/protos
 COPY go.mod /app
 COPY go.sum /app
 COPY goBuild.sh /app
-
+COPY .env /app
 # Build App
 RUN ./goBuild.sh
 

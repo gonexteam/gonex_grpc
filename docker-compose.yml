@@ -4,7 +4,7 @@ services:
     user:
         build:
             context: ./userService
-        image: microservice/demo/user
+        image: gonex/user
         restart: "no"
         environment:
             - DB_URI=mongodb://mongo:27017/
@@ -17,7 +17,7 @@ services:
     project:
         build:
             context: ./projectService
-        image: microservice/demo/project
+        image: gonex/project
         restart: "no"
         environment:
             - DB_URI=mysql+mysqldb://root:password@mysql:3306/microservice-project
@@ -30,7 +30,7 @@ services:
     task:
         build:
             context: ./taskService
-        image: microservice/demo/task
+        image: gonex/task
         restart: "no"
         entrypoint: [./init]
         environment:
@@ -46,8 +46,9 @@ services:
 
     api:
         build:
-            context: ./apiService
-        image: microservice/demo/api
+            context: .
+            dockerfile: ./apiService/Dockerfile
+        image: gonex/api
         restart: "no"
         environment:
             - USER_ADDRESS=user:50051
@@ -63,7 +64,7 @@ services:
 
 
     api-gateway:
-        image: microservice/demo/api
+        image: gonex/api
         restart: "no"
         environment:
             - HOST=api

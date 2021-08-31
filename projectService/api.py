@@ -1,6 +1,6 @@
 import logging
-import proto.project_pb2 as message
-import proto.project_pb2_grpc as service
+from . 0 as message
+from . 0_grpc as service
 from model import Project, Tag
 from datetime import date
 from service import session

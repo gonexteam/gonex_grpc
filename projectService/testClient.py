@@ -1,5 +1,5 @@
-import proto.project_pb2 as message
-import proto.project_pb2_grpc as service
+from . 0 as message
+from . 0_grpc as service
 
 import logging
 import grpc

@@ -24,7 +24,7 @@
           "200": {
             "description": "A successful response.",
             "schema": {
-              "$ref": "#/definitions/demo_projectProjectResponse"
+              "$ref": "#/definitions/gonex_projectProjectResponse"
             }
           },
           "default": {
@@ -40,7 +40,7 @@
             "in": "body",
             "required": true,
             "schema": {
-              "$ref": "#/definitions/demo_projectCreateProjectRequest"
+              "$ref": "#/definitions/gonex_projectCreateProjectRequest"
             }
           }
         ],
@@ -57,7 +57,7 @@
           "200": {
             "description": "A successful response.",
             "schema": {
-              "$ref": "#/definitions/demo_projectProjectResponse"
+              "$ref": "#/definitions/gonex_projectProjectResponse"
             }
           },
           "default": {
@@ -94,7 +94,7 @@
           "200": {
             "description": "A successful response.",
             "schema": {
-              "$ref": "#/definitions/demo_taskListTasksResponse"
+              "$ref": "#/definitions/gonex_taskListTasksResponse"
             }
           },
           "default": {
@@ -137,7 +137,7 @@
           "200": {
             "description": "A successful response.",
             "schema": {
-              "$ref": "#/definitions/demo_taskListTasksResponse"
+              "$ref": "#/definitions/gonex_taskListTasksResponse"
             }
           },
           "default": {
@@ -180,7 +180,7 @@
           "200": {
             "description": "A successful response.",
             "schema": {
-              "$ref": "#/definitions/demo_taskListTasksResponse"
+              "$ref": "#/definitions/gonex_taskListTasksResponse"
             }
           },
           "default": {
@@ -223,7 +223,7 @@
           "200": {
             "description": "A successful response.",
             "schema": {
-              "$ref": "#/definitions/demo_taskTaskResponse"
+              "$ref": "#/definitions/gonex_taskTaskResponse"
             }
           },
           "default": {
@@ -239,7 +239,7 @@
             "in": "body",
             "required": true,
             "schema": {
-              "$ref": "#/definitions/demo_taskCreateTaskRequest"
+              "$ref": "#/definitions/gonex_taskCreateTaskRequest"
             }
           }
         ],
@@ -256,7 +256,7 @@
           "200": {
             "description": "A successful response.",
             "schema": {
-              "$ref": "#/definitions/demo_taskTaskResponse"
+              "$ref": "#/definitions/gonex_taskTaskResponse"
             }
           },
           "default": {
@@ -272,7 +272,7 @@
             "in": "body",
             "required": true,
             "schema": {
-              "$ref": "#/definitions/demo_taskUpdateTaskRequest"
+              "$ref": "#/definitions/gonex_taskUpdateTaskRequest"
             }
           }
         ],
@@ -289,7 +289,7 @@
           "200": {
             "description": "A successful response.",
             "schema": {
-              "$ref": "#/definitions/demo_userUserResponse"
+              "$ref": "#/definitions/gonex_userUserResponse"
             }
           },
           "default": {
@@ -305,7 +305,7 @@
             "in": "body",
             "required": true,
             "schema": {
-              "$ref": "#/definitions/demo_userLoginRequest"
+              "$ref": "#/definitions/gonex_userLoginRequest"
             }
           }
         ],
@@ -322,7 +322,7 @@
           "200": {
             "description": "A successful response.",
             "schema": {
-              "$ref": "#/definitions/demo_userUserResponse"
+              "$ref": "#/definitions/gonex_userUserResponse"
             }
           },
           "default": {
@@ -338,7 +338,7 @@
             "in": "body",
             "required": true,
             "schema": {
-              "$ref": "#/definitions/demo_userRegisterRequest"
+              "$ref": "#/definitions/gonex_userRegisterRequest"
             }
           }
         ],
@@ -349,7 +349,7 @@
     }
   },
   "definitions": {
-    "demo_projectCreateProjectRequest": {
+    "gonex_projectCreateProjectRequest": {
       "type": "object",
       "properties": {
         "userId": {
@@ -360,7 +360,7 @@
         }
       }
     },
-    "demo_projectProjectResponse": {
+    "gonex_projectProjectResponse": {
       "type": "object",
       "properties": {
         "id": {
@@ -372,12 +372,12 @@
         "tags": {
           "type": "array",
           "items": {
-            "$ref": "#/definitions/demo_projectTagResponse"
+            "$ref": "#/definitions/gonex_projectTagResponse"
           }
         }
       }
     },
-    "demo_projectTagResponse": {
+    "gonex_projectTagResponse": {
       "type": "object",
       "properties": {
         "id": {
@@ -391,7 +391,7 @@
         }
       }
     },
-    "demo_taskCreateTaskRequest": {
+    "gonex_taskCreateTaskRequest": {
       "type": "object",
       "properties": {
         "userId": {
@@ -411,18 +411,18 @@
         }
       }
     },
-    "demo_taskListTasksResponse": {
+    "gonex_taskListTasksResponse": {
       "type": "object",
       "properties": {
         "tasks": {
           "type": "array",
           "items": {
-            "$ref": "#/definitions/demo_taskTaskResponse"
+            "$ref": "#/definitions/gonex_taskTaskResponse"
           }
         }
       }
     },
-    "demo_taskTaskResponse": {
+    "gonex_taskTaskResponse": {
       "type": "object",
       "properties": {
         "id": {
@@ -444,17 +444,17 @@
           "type": "string"
         },
         "project": {
-          "$ref": "#/definitions/demo_projectProjectResponse"
+          "$ref": "#/definitions/gonex_projectProjectResponse"
         },
         "tag": {
-          "$ref": "#/definitions/demo_projectTagResponse"
+          "$ref": "#/definitions/gonex_projectTagResponse"
         },
         "assignedUser": {
-          "$ref": "#/definitions/demo_userVerifyResponse"
+          "$ref": "#/definitions/gonex_userVerifyResponse"
         }
       }
     },
-    "demo_taskUpdateTaskRequest": {
+    "gonex_taskUpdateTaskRequest": {
       "type": "object",
       "properties": {
         "userId": {
@@ -471,7 +471,7 @@
         }
       }
     },
-    "demo_userLoginRequest": {
+    "gonex_userLoginRequest": {
       "type": "object",
       "properties": {
         "email": {
@@ -482,7 +482,7 @@
         }
       }
     },
-    "demo_userRegisterRequest": {
+    "gonex_userRegisterRequest": {
       "type": "object",
       "properties": {
         "name": {
@@ -496,7 +496,7 @@
         }
       }
     },
-    "demo_userUserResponse": {
+    "gonex_userUserResponse": {
       "type": "object",
       "properties": {
         "id": {
@@ -513,7 +513,7 @@
         }
       }
     },
-    "demo_userVerifyResponse": {
+    "gonex_userVerifyResponse": {
       "type": "object",
       "properties": {
         "id": {

@@ -1,6 +1,6 @@
 syntax = "proto3";
 
-package demo_task;
+package gonex_task;
 
 option go_package = "gonex.net/protos/task";
 
@@ -45,7 +45,7 @@ message TaskResponse {
     string project_id = 4;
     string tag_id = 5;
     string assigned_user_id = 6;
-    demo_project.ProjectResponse project = 7;
-    demo_project.TagResponse tag = 8;
-    demo_user.VerifyResponse assigned_user = 9;
+    gonex_project.ProjectResponse project = 7;
+    gonex_project.TagResponse tag = 8;
+    gonex_user.VerifyResponse assigned_user = 9;
 }

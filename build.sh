@@ -13,6 +13,9 @@ python3 -m grpc_tools.protoc \
     --python_out=./projectService/proto \
     --grpc_python_out=./projectService/proto \
     --proto_path=./protos/project ./protos/project/*.proto
+#python3 -m grpc_tools.protoc \
+#    --python_betterproto_out=./projectService/proto \
+#    --proto_path=./protos/project ./protos/project/*.proto
 
 # Build the task/project/user service protos for Ruby
 grpc_tools_ruby_protoc \
@@ -42,9 +45,10 @@ packs=(
 );
 
 # Generate go protobuf files for all protos
+# shellcheck disable=SC2068
 for d in ${packs[@]} ; do
     echo "Compiling $d";
-    protoc -I . -I$GOPATH/src/github.com/grpc-ecosystem/grpc-gateway/third_party/googleapis \
+    protoc -I . -Ithird_party/googleapis \
             -I protos \
             --go_out=. --go_opt=paths=source_relative \
             --go-grpc_out=. --go-grpc_opt=paths=source_relative \
@@ -52,7 +56,7 @@ for d in ${packs[@]} ; do
 done
 
 # Generate api definition with GRPC Gateway
-protoc -I . -I$GOPATH/src/github.com/grpc-ecosystem/grpc-gateway/third_party/googleapis \
+protoc -I . -Ithird_party/googleapis \
     -I protos \
     --grpc-gateway_out . \
     --grpc-gateway_opt logtostderr=true \
@@ -60,7 +64,7 @@ protoc -I . -I$GOPATH/src/github.com/grpc-ecosystem/grpc-gateway/third_party/goo
     protos/api/api.proto
 
 # Genrate swagger docs with GRPC Gateway
-protoc -I . -I . -I$GOPATH/src/github.com/grpc-ecosystem/grpc-gateway/third_party/googleapis \
+protoc -I . -I . -Ithird_party/googleapis \
     -I protos \
     --openapiv2_out . \
     --openapiv2_opt logtostderr=true \

@@ -1,12 +1,11 @@
 module gonex.net
 
-go 1.15
+go 1.16
 
 require (
-	github.com/golang/protobuf v1.5.2
+	github.com/golang/protobuf v1.5.2 // indirect
 	github.com/google/go-cmp v0.5.6 // indirect
 	github.com/grpc-ecosystem/go-grpc-middleware v1.3.0
-	github.com/grpc-ecosystem/grpc-gateway v1.16.0
 	github.com/grpc-ecosystem/grpc-gateway/v2 v2.5.0
 	github.com/joho/godotenv v1.3.0
 	github.com/spf13/cobra v1.2.1

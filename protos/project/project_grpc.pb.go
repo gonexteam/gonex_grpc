@@ -33,7 +33,7 @@ func NewProjectSvcClient(cc grpc.ClientConnInterface) ProjectSvcClient {
 
 func (c *projectSvcClient) CreateProject(ctx context.Context, in *CreateProjectRequest, opts ...grpc.CallOption) (*ProjectResponse, error) {
 	out := new(ProjectResponse)
-	err := c.cc.Invoke(ctx, "/demo_project.ProjectSvc/createProject", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/gonex_project.ProjectSvc/createProject", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -42,7 +42,7 @@ func (c *projectSvcClient) CreateProject(ctx context.Context, in *CreateProjectR
 
 func (c *projectSvcClient) CreateTag(ctx context.Context, in *CreateTagRequest, opts ...grpc.CallOption) (*TagResponse, error) {
 	out := new(TagResponse)
-	err := c.cc.Invoke(ctx, "/demo_project.ProjectSvc/createTag", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/gonex_project.ProjectSvc/createTag", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -51,7 +51,7 @@ func (c *projectSvcClient) CreateTag(ctx context.Context, in *CreateTagRequest, 
 
 func (c *projectSvcClient) GetProject(ctx context.Context, in *GetProjectRequest, opts ...grpc.CallOption) (*ProjectResponse, error) {
 	out := new(ProjectResponse)
-	err := c.cc.Invoke(ctx, "/demo_project.ProjectSvc/getProject", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/gonex_project.ProjectSvc/getProject", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -104,7 +104,7 @@ func _ProjectSvc_CreateProject_Handler(srv interface{}, ctx context.Context, dec
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/demo_project.ProjectSvc/createProject",
+		FullMethod: "/gonex_project.ProjectSvc/createProject",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(ProjectSvcServer).CreateProject(ctx, req.(*CreateProjectRequest))
@@ -122,7 +122,7 @@ func _ProjectSvc_CreateTag_Handler(srv interface{}, ctx context.Context, dec fun
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/demo_project.ProjectSvc/createTag",
+		FullMethod: "/gonex_project.ProjectSvc/createTag",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(ProjectSvcServer).CreateTag(ctx, req.(*CreateTagRequest))
@@ -140,7 +140,7 @@ func _ProjectSvc_GetProject_Handler(srv interface{}, ctx context.Context, dec fu
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/demo_project.ProjectSvc/getProject",
+		FullMethod: "/gonex_project.ProjectSvc/getProject",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(ProjectSvcServer).GetProject(ctx, req.(*GetProjectRequest))
@@ -152,7 +152,7 @@ func _ProjectSvc_GetProject_Handler(srv interface{}, ctx context.Context, dec fu
 // It's only intended for direct use with grpc.RegisterService,
 // and not to be introspected or modified (even as a copy)
 var ProjectSvc_ServiceDesc = grpc.ServiceDesc{
-	ServiceName: "demo_project.ProjectSvc",
+	ServiceName: "gonex_project.ProjectSvc",
 	HandlerType: (*ProjectSvcServer)(nil),
 	Methods: []grpc.MethodDesc{
 		{

@@ -16,3 +16,4 @@ apiService/.idea
 vendor
 .idea
 *.DS_Store
+venv*

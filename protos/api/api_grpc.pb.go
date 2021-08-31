@@ -47,7 +47,7 @@ func NewAPIClient(cc grpc.ClientConnInterface) APIClient {
 
 func (c *aPIClient) RegisterUser(ctx context.Context, in *user.RegisterRequest, opts ...grpc.CallOption) (*user.UserResponse, error) {
 	out := new(user.UserResponse)
-	err := c.cc.Invoke(ctx, "/demo_api.API/RegisterUser", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/gonex_api.API/RegisterUser", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -56,7 +56,7 @@ func (c *aPIClient) RegisterUser(ctx context.Context, in *user.RegisterRequest, 
 
 func (c *aPIClient) LoginUser(ctx context.Context, in *user.LoginRequest, opts ...grpc.CallOption) (*user.UserResponse, error) {
 	out := new(user.UserResponse)
-	err := c.cc.Invoke(ctx, "/demo_api.API/LoginUser", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/gonex_api.API/LoginUser", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -65,7 +65,7 @@ func (c *aPIClient) LoginUser(ctx context.Context, in *user.LoginRequest, opts .
 
 func (c *aPIClient) CreateProject(ctx context.Context, in *project.CreateProjectRequest, opts ...grpc.CallOption) (*project.ProjectResponse, error) {
 	out := new(project.ProjectResponse)
-	err := c.cc.Invoke(ctx, "/demo_api.API/CreateProject", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/gonex_api.API/CreateProject", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -74,7 +74,7 @@ func (c *aPIClient) CreateProject(ctx context.Context, in *project.CreateProject
 
 func (c *aPIClient) GetProject(ctx context.Context, in *project.GetProjectRequest, opts ...grpc.CallOption) (*project.ProjectResponse, error) {
 	out := new(project.ProjectResponse)
-	err := c.cc.Invoke(ctx, "/demo_api.API/GetProject", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/gonex_api.API/GetProject", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -83,7 +83,7 @@ func (c *aPIClient) GetProject(ctx context.Context, in *project.GetProjectReques
 
 func (c *aPIClient) CreateTask(ctx context.Context, in *task.CreateTaskRequest, opts ...grpc.CallOption) (*task.TaskResponse, error) {
 	out := new(task.TaskResponse)
-	err := c.cc.Invoke(ctx, "/demo_api.API/CreateTask", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/gonex_api.API/CreateTask", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -92,7 +92,7 @@ func (c *aPIClient) CreateTask(ctx context.Context, in *task.CreateTaskRequest, 
 
 func (c *aPIClient) UpdateTask(ctx context.Context, in *task.UpdateTaskRequest, opts ...grpc.CallOption) (*task.TaskResponse, error) {
 	out := new(task.TaskResponse)
-	err := c.cc.Invoke(ctx, "/demo_api.API/UpdateTask", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/gonex_api.API/UpdateTask", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -101,7 +101,7 @@ func (c *aPIClient) UpdateTask(ctx context.Context, in *task.UpdateTaskRequest, 
 
 func (c *aPIClient) ListTasks(ctx context.Context, in *task.ListTasksRequest, opts ...grpc.CallOption) (*task.ListTasksResponse, error) {
 	out := new(task.ListTasksResponse)
-	err := c.cc.Invoke(ctx, "/demo_api.API/ListTasks", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/gonex_api.API/ListTasks", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -177,7 +177,7 @@ func _API_RegisterUser_Handler(srv interface{}, ctx context.Context, dec func(in
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/demo_api.API/RegisterUser",
+		FullMethod: "/gonex_api.API/RegisterUser",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(APIServer).RegisterUser(ctx, req.(*user.RegisterRequest))
@@ -195,7 +195,7 @@ func _API_LoginUser_Handler(srv interface{}, ctx context.Context, dec func(inter
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/demo_api.API/LoginUser",
+		FullMethod: "/gonex_api.API/LoginUser",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(APIServer).LoginUser(ctx, req.(*user.LoginRequest))
@@ -213,7 +213,7 @@ func _API_CreateProject_Handler(srv interface{}, ctx context.Context, dec func(i
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/demo_api.API/CreateProject",
+		FullMethod: "/gonex_api.API/CreateProject",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(APIServer).CreateProject(ctx, req.(*project.CreateProjectRequest))
@@ -231,7 +231,7 @@ func _API_GetProject_Handler(srv interface{}, ctx context.Context, dec func(inte
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/demo_api.API/GetProject",
+		FullMethod: "/gonex_api.API/GetProject",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(APIServer).GetProject(ctx, req.(*project.GetProjectRequest))
@@ -249,7 +249,7 @@ func _API_CreateTask_Handler(srv interface{}, ctx context.Context, dec func(inte
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/demo_api.API/CreateTask",
+		FullMethod: "/gonex_api.API/CreateTask",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(APIServer).CreateTask(ctx, req.(*task.CreateTaskRequest))
@@ -267,7 +267,7 @@ func _API_UpdateTask_Handler(srv interface{}, ctx context.Context, dec func(inte
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/demo_api.API/UpdateTask",
+		FullMethod: "/gonex_api.API/UpdateTask",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(APIServer).UpdateTask(ctx, req.(*task.UpdateTaskRequest))
@@ -285,7 +285,7 @@ func _API_ListTasks_Handler(srv interface{}, ctx context.Context, dec func(inter
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/demo_api.API/ListTasks",
+		FullMethod: "/gonex_api.API/ListTasks",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(APIServer).ListTasks(ctx, req.(*task.ListTasksRequest))
@@ -297,7 +297,7 @@ func _API_ListTasks_Handler(srv interface{}, ctx context.Context, dec func(inter
 // It's only intended for direct use with grpc.RegisterService,
 // and not to be introspected or modified (even as a copy)
 var API_ServiceDesc = grpc.ServiceDesc{
-	ServiceName: "demo_api.API",
+	ServiceName: "gonex_api.API",
 	HandlerType: (*APIServer)(nil),
 	Methods: []grpc.MethodDesc{
 		{

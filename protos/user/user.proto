@@ -1,6 +1,6 @@
 syntax = "proto3";
 
-package demo_user;
+package gonex_user;
 
 option go_package = "gonex.net/protos/user";
 

@@ -33,7 +33,7 @@ func NewTaskSvcClient(cc grpc.ClientConnInterface) TaskSvcClient {
 
 func (c *taskSvcClient) CreateTask(ctx context.Context, in *CreateTaskRequest, opts ...grpc.CallOption) (*TaskResponse, error) {
 	out := new(TaskResponse)
-	err := c.cc.Invoke(ctx, "/demo_task.TaskSvc/createTask", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/gonex_task.TaskSvc/createTask", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -42,7 +42,7 @@ func (c *taskSvcClient) CreateTask(ctx context.Context, in *CreateTaskRequest, o
 
 func (c *taskSvcClient) UpdateTask(ctx context.Context, in *UpdateTaskRequest, opts ...grpc.CallOption) (*TaskResponse, error) {
 	out := new(TaskResponse)
-	err := c.cc.Invoke(ctx, "/demo_task.TaskSvc/updateTask", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/gonex_task.TaskSvc/updateTask", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -51,7 +51,7 @@ func (c *taskSvcClient) UpdateTask(ctx context.Context, in *UpdateTaskRequest, o
 
 func (c *taskSvcClient) ListTasks(ctx context.Context, in *ListTasksRequest, opts ...grpc.CallOption) (*ListTasksResponse, error) {
 	out := new(ListTasksResponse)
-	err := c.cc.Invoke(ctx, "/demo_task.TaskSvc/listTasks", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/gonex_task.TaskSvc/listTasks", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -104,7 +104,7 @@ func _TaskSvc_CreateTask_Handler(srv interface{}, ctx context.Context, dec func(
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/demo_task.TaskSvc/createTask",
+		FullMethod: "/gonex_task.TaskSvc/createTask",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(TaskSvcServer).CreateTask(ctx, req.(*CreateTaskRequest))
@@ -122,7 +122,7 @@ func _TaskSvc_UpdateTask_Handler(srv interface{}, ctx context.Context, dec func(
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/demo_task.TaskSvc/updateTask",
+		FullMethod: "/gonex_task.TaskSvc/updateTask",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(TaskSvcServer).UpdateTask(ctx, req.(*UpdateTaskRequest))
@@ -140,7 +140,7 @@ func _TaskSvc_ListTasks_Handler(srv interface{}, ctx context.Context, dec func(i
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/demo_task.TaskSvc/listTasks",
+		FullMethod: "/gonex_task.TaskSvc/listTasks",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(TaskSvcServer).ListTasks(ctx, req.(*ListTasksRequest))
@@ -152,7 +152,7 @@ func _TaskSvc_ListTasks_Handler(srv interface{}, ctx context.Context, dec func(i
 // It's only intended for direct use with grpc.RegisterService,
 // and not to be introspected or modified (even as a copy)
 var TaskSvc_ServiceDesc = grpc.ServiceDesc{
-	ServiceName: "demo_task.TaskSvc",
+	ServiceName: "gonex_task.TaskSvc",
 	HandlerType: (*TaskSvcServer)(nil),
 	Methods: []grpc.MethodDesc{
 		{

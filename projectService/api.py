@@ -1,6 +1,6 @@
 import logging
-from . 0 as message
-from . 0_grpc as service
+from proto import project_pb2_grpc as service
+from proto import project_pb2 as message
 from model import Project, Tag
 from datetime import date
 from service import session
@@ -31,7 +31,7 @@ class API(service.ProjectSvcServicer):
 
         list_tags_resp = []
         for tag in db_tags:
-            tag_message = message.TagResponse(id=str(tag.id), name=tag.name, project_id=str(tag.project_id))
+            tag_message = service.TagResponse(id=str(tag.id), name=tag.name, project_id=str(tag.project_id))
             list_tags_resp.append(tag_message)
 
         project = message.ProjectResponse(id=str(db_project.id), name=db_project.name, tags=list_tags_resp)

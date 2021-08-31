@@ -15,17 +15,17 @@ class ProjectSvcStub(object):
             channel: A grpc.Channel.
         """
         self.createProject = channel.unary_unary(
-                '/demo_project.ProjectSvc/createProject',
+                '/gonex_project.ProjectSvc/createProject',
                 request_serializer=project__pb2.CreateProjectRequest.SerializeToString,
                 response_deserializer=project__pb2.ProjectResponse.FromString,
                 )
         self.createTag = channel.unary_unary(
-                '/demo_project.ProjectSvc/createTag',
+                '/gonex_project.ProjectSvc/createTag',
                 request_serializer=project__pb2.CreateTagRequest.SerializeToString,
                 response_deserializer=project__pb2.TagResponse.FromString,
                 )
         self.getProject = channel.unary_unary(
-                '/demo_project.ProjectSvc/getProject',
+                '/gonex_project.ProjectSvc/getProject',
                 request_serializer=project__pb2.GetProjectRequest.SerializeToString,
                 response_deserializer=project__pb2.ProjectResponse.FromString,
                 )
@@ -72,7 +72,7 @@ def add_ProjectSvcServicer_to_server(servicer, server):
             ),
     }
     generic_handler = grpc.method_handlers_generic_handler(
-            'demo_project.ProjectSvc', rpc_method_handlers)
+            'gonex_project.ProjectSvc', rpc_method_handlers)
     server.add_generic_rpc_handlers((generic_handler,))
 
 
@@ -91,7 +91,7 @@ class ProjectSvc(object):
             wait_for_ready=None,
             timeout=None,
             metadata=None):
-        return grpc.experimental.unary_unary(request, target, '/demo_project.ProjectSvc/createProject',
+        return grpc.experimental.unary_unary(request, target, '/gonex_project.ProjectSvc/createProject',
             project__pb2.CreateProjectRequest.SerializeToString,
             project__pb2.ProjectResponse.FromString,
             options, channel_credentials,
@@ -108,7 +108,7 @@ class ProjectSvc(object):
             wait_for_ready=None,
             timeout=None,
             metadata=None):
-        return grpc.experimental.unary_unary(request, target, '/demo_project.ProjectSvc/createTag',
+        return grpc.experimental.unary_unary(request, target, '/gonex_project.ProjectSvc/createTag',
             project__pb2.CreateTagRequest.SerializeToString,
             project__pb2.TagResponse.FromString,
             options, channel_credentials,
@@ -125,7 +125,7 @@ class ProjectSvc(object):
             wait_for_ready=None,
             timeout=None,
             metadata=None):
-        return grpc.experimental.unary_unary(request, target, '/demo_project.ProjectSvc/getProject',
+        return grpc.experimental.unary_unary(request, target, '/gonex_project.ProjectSvc/getProject',
             project__pb2.GetProjectRequest.SerializeToString,
             project__pb2.ProjectResponse.FromString,
             options, channel_credentials,

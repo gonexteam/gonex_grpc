@@ -34,7 +34,7 @@ func NewUserSvcClient(cc grpc.ClientConnInterface) UserSvcClient {
 
 func (c *userSvcClient) Register(ctx context.Context, in *RegisterRequest, opts ...grpc.CallOption) (*UserResponse, error) {
 	out := new(UserResponse)
-	err := c.cc.Invoke(ctx, "/demo_user.UserSvc/register", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/gonex_user.UserSvc/register", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -43,7 +43,7 @@ func (c *userSvcClient) Register(ctx context.Context, in *RegisterRequest, opts 
 
 func (c *userSvcClient) Login(ctx context.Context, in *LoginRequest, opts ...grpc.CallOption) (*UserResponse, error) {
 	out := new(UserResponse)
-	err := c.cc.Invoke(ctx, "/demo_user.UserSvc/login", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/gonex_user.UserSvc/login", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -52,7 +52,7 @@ func (c *userSvcClient) Login(ctx context.Context, in *LoginRequest, opts ...grp
 
 func (c *userSvcClient) Verify(ctx context.Context, in *VerifyRequest, opts ...grpc.CallOption) (*VerifyResponse, error) {
 	out := new(VerifyResponse)
-	err := c.cc.Invoke(ctx, "/demo_user.UserSvc/verify", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/gonex_user.UserSvc/verify", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -61,7 +61,7 @@ func (c *userSvcClient) Verify(ctx context.Context, in *VerifyRequest, opts ...g
 
 func (c *userSvcClient) GetUser(ctx context.Context, in *GetUserRequest, opts ...grpc.CallOption) (*VerifyResponse, error) {
 	out := new(VerifyResponse)
-	err := c.cc.Invoke(ctx, "/demo_user.UserSvc/getUser", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/gonex_user.UserSvc/getUser", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -118,7 +118,7 @@ func _UserSvc_Register_Handler(srv interface{}, ctx context.Context, dec func(in
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/demo_user.UserSvc/register",
+		FullMethod: "/gonex_user.UserSvc/register",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(UserSvcServer).Register(ctx, req.(*RegisterRequest))
@@ -136,7 +136,7 @@ func _UserSvc_Login_Handler(srv interface{}, ctx context.Context, dec func(inter
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/demo_user.UserSvc/login",
+		FullMethod: "/gonex_user.UserSvc/login",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(UserSvcServer).Login(ctx, req.(*LoginRequest))
@@ -154,7 +154,7 @@ func _UserSvc_Verify_Handler(srv interface{}, ctx context.Context, dec func(inte
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/demo_user.UserSvc/verify",
+		FullMethod: "/gonex_user.UserSvc/verify",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(UserSvcServer).Verify(ctx, req.(*VerifyRequest))
@@ -172,7 +172,7 @@ func _UserSvc_GetUser_Handler(srv interface{}, ctx context.Context, dec func(int
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/demo_user.UserSvc/getUser",
+		FullMethod: "/gonex_user.UserSvc/getUser",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(UserSvcServer).GetUser(ctx, req.(*GetUserRequest))
@@ -184,7 +184,7 @@ func _UserSvc_GetUser_Handler(srv interface{}, ctx context.Context, dec func(int
 // It's only intended for direct use with grpc.RegisterService,
 // and not to be introspected or modified (even as a copy)
 var UserSvc_ServiceDesc = grpc.ServiceDesc{
-	ServiceName: "demo_user.UserSvc",
+	ServiceName: "gonex_user.UserSvc",
 	HandlerType: (*UserSvcServer)(nil),
 	Methods: []grpc.MethodDesc{
 		{
